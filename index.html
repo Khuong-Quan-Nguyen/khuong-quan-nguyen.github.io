@@ -81,6 +81,13 @@
     font-size: 13px;
     color: var(--teal);
     letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .rail-top .mark-role{
+    display: block;
+    font-size: 11px;
+    color: var(--text-faint);
+    letter-spacing: 0.06em;
   }
 
   .rail-nav{
@@ -124,6 +131,24 @@
   .hero{
     padding: 100px 0 56px;
     border-bottom: 1px solid var(--border);
+  }
+
+  .hero-grid{
+    display: grid;
+    grid-template-columns: 1fr 232px;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .portrait{
+    width: 232px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface);
   }
 
   .eyebrow{
@@ -390,6 +415,8 @@
   @media (max-width: 860px){
     .layout{ grid-template-columns: 1fr; }
     .railcol{ display:none; }
+    .hero-grid{ grid-template-columns: 1fr; gap: 32px; }
+    .portrait{ width: 148px; }
     .mobile-topbar{
       display:flex; justify-content: space-between; align-items:center;
       padding: 20px 24px; border-bottom: 1px solid var(--border);
@@ -412,14 +439,14 @@
 <body>
 
 <div class="mobile-topbar">
-  <span>quan.dev</span>
+  <span>Quan Nguyen</span>
   <a href="#contact">contact →</a>
 </div>
 
 <div class="layout">
   <aside class="railcol">
     <div class="rail-top">
-      <div class="mark">QN / AI ENGINEER</div>
+      <div class="mark">QUAN NGUYEN<span class="mark-role">AI ENGINEER</span></div>
       <nav class="rail-nav">
         <a href="#intro">Intro</a>
         <a href="#work">Work</a>
@@ -438,15 +465,20 @@
 
     <div class="wrap">
       <section class="hero" id="intro">
-        <div class="eyebrow"><span class="dot"></span>OPEN TO AI ENGINEER ROLES</div>
-        <h1>I build AI systems that pass an audit, not just a demo.</h1>
-        <p class="hero-sub">
-          Quan Nguyen — recent AI/ML grad in Toronto. I ship <strong>forecasting agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Currently targeting AI Engineer roles at Canadian banks and startups.
-        </p>
-        <div class="hero-links">
-          <a class="btn primary" href="#work">View projects</a>
-          <a class="btn" href="https://github.com/Khuong-Quan-Nguyen" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn" href="mailto:quannguyenkhuong8499@gmail.com">Email</a>
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow"><span class="dot"></span>OPEN TO AI ENGINEER ROLES</div>
+            <h1>I build AI systems that pass an audit, not just a demo.</h1>
+            <p class="hero-sub">
+              Quan Nguyen — recent AI/ML grad in Toronto. I ship <strong>forecasting agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Currently targeting AI Engineer roles at Canadian banks and startups.
+            </p>
+            <div class="hero-links">
+              <a class="btn primary" href="#work">View projects</a>
+              <a class="btn" href="https://github.com/Khuong-Quan-Nguyen" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="btn" href="mailto:quannguyenkhuong8499@gmail.com">Email</a>
+            </div>
+          </div>
+          <img class="portrait" src="assets/quan-nguyen.jpg" alt="Quan Nguyen" width="682" height="1024">
         </div>
 
         <div class="log">
