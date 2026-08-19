@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quan Nguyen — AI Engineer</title>
+<meta name="description" content="Quan Nguyen — AI Engineer in Toronto. Production-grade ML systems: forecasting agents, governance gateways, MCP servers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0F14;
+    --surface: #10161D;
+    --surface-2: #141B23;
+    --border: #212A34;
+    --text: #E8ECF1;
+    --text-muted: #8A97A6;
+    --text-faint: #566270;
+    --teal: #4FD1C5;
+    --amber: #E8A33D;
+    --teal-dim: rgba(79, 209, 197, 0.12);
+    --amber-dim: rgba(232, 163, 61, 0.12);
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: inherit; text-decoration:none; }
+  ::selection{ background: var(--teal-dim); color: var(--teal); }
+
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--teal);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  .wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ---------- Layout: nav rail ---------- */
+  .layout{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .railcol{
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    padding: 40px 24px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .rail-top .mark{
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--teal);
+    letter-spacing: 0.04em;
+  }
+
+  .rail-nav{
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .rail-nav a{
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-faint);
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.02em;
+    transition: color 0.15s ease;
+  }
+  .rail-nav a::before{
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: background 0.15s ease;
+  }
+  .rail-nav a:hover{ color: var(--text); }
+  .rail-nav a:hover::before{ background: var(--teal); }
+
+  .rail-bottom{
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    line-height: 1.8;
+  }
+
+  .maincol{ min-width: 0; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding: 100px 0 56px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .eyebrow .dot{
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 0 3px var(--amber-dim);
+  }
+
+  h1{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(40px, 5.2vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    max-width: 16ch;
+  }
+
+  .hero-sub{
+    margin-top: 24px;
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 56ch;
+  }
+  .hero-sub strong{ color: var(--text); font-weight: 500; }
+
+  .hero-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .btn{
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    padding: 11px 18px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--text-muted);
+    transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover{ border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
+  .btn.primary{ border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
+  .btn.primary:hover{ background: rgba(79,209,197,0.2); }
+
+  /* ---------- Log ticker (signature element) ---------- */
+  .log{
+    margin-top: 44px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .log-head{
+    display:flex; align-items:center; gap:8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+  .log-head .dots{ display:flex; gap:5px; margin-right: 6px; }
+  .log-head .dots span{ width:7px; height:7px; border-radius:50%; background: var(--border); }
+  .log-body{
+    padding: 16px 16px 18px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+  .log-line{ display:flex; gap: 10px; padding: 3px 0; }
+  .log-line .tag{ color: var(--teal); flex-shrink:0; width: 92px; }
+  .log-line .tag.amber{ color: var(--amber); }
+  .log-line .val{ color: var(--text-muted); }
+  .log-line .ok{ color: var(--teal); }
+
+  /* ---------- Section shell ---------- */
+  section{ padding: 72px 0; border-bottom: 1px solid var(--border); }
+  section:last-of-type{ border-bottom: none; }
+
+  .section-head{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 24px;
+  }
+  .section-num{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+  h2{
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+  }
+  .section-note{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-faint);
+    max-width: 32ch;
+    text-align: right;
+  }
+
+  /* ---------- Projects ---------- */
+  .projects{ display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+
+  .project{
+    background: var(--surface);
+    padding: 28px 28px;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 32px;
+    transition: background 0.15s ease;
+  }
+  .project:hover{ background: var(--surface-2); }
+
+  .project-name{
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .status{
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .status.live{ color: var(--teal); background: var(--teal-dim); border: 1px solid rgba(79,209,197,0.35); }
+  .status.build{ color: var(--amber); background: var(--amber-dim); border: 1px solid rgba(232,163,61,0.35); }
+
+  .project-desc{
+    margin-top: 10px;
+    color: var(--text-muted);
+    font-size: 14.5px;
+    max-width: 58ch;
+  }
+
+  .project-target{
+    margin-top: 12px;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-faint);
+  }
+  .project-target span{ color: var(--amber); }
+
+  .project-meta{
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .meta-row{ display:flex; justify-content: space-between; gap: 12px; color: var(--text-faint); }
+  .meta-row .v{ color: var(--text-muted); text-align: right; }
+
+  .project-links{ display: flex; gap: 14px; margin-top: 4px; }
+  .project-links a{ color: var(--teal); font-family: var(--font-mono); font-size: 11.5px; }
+  .project-links a:hover{ text-decoration: underline; }
+
+  .fine{
+    margin-top: 40px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-faint);
+    line-height: 1.7;
+  }
+
+  /* ---------- Experience ---------- */
+  .timeline{ display: flex; flex-direction: column; }
+  .role{
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 28px;
+    padding: 22px 0;
+    border-top: 1px solid var(--border);
+  }
+  .role:first-child{ border-top: none; }
+  .role-date{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-faint);
+    padding-top: 3px;
+  }
+  .role-title{
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .role-org{ color: var(--teal); font-weight: 500; }
+  .role-desc{ margin-top: 8px; color: var(--text-muted); font-size: 14px; max-width: 62ch; }
+
+  /* ---------- Skills ---------- */
+  .skill-groups{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+  .skill-group-label{
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--amber);
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .chip-row{ display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip{
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 6px 11px;
+    border-radius: 3px;
+  }
+
+  /* ---------- Contact / footer ---------- */
+  .contact-grid{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .contact-lead{
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.3;
+    max-width: 18ch;
+  }
+  .contact-list{ font-family: var(--font-mono); font-size: 13.5px; display:flex; flex-direction:column; gap:12px; }
+  .contact-list a{ color: var(--text-muted); }
+  .contact-list a:hover{ color: var(--teal); }
+  .contact-list .k{ color: var(--text-faint); display:inline-block; width: 74px; }
+
+  footer{
+    padding: 28px 0 60px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-faint);
+  }
+
+  /* ---------- Mobile nav (hidden rail, top bar instead) ---------- */
+  .mobile-topbar{ display:none; }
+
+  @media (max-width: 860px){
+    .layout{ grid-template-columns: 1fr; }
+    .railcol{ display:none; }
+    .mobile-topbar{
+      display:flex; justify-content: space-between; align-items:center;
+      padding: 20px 24px; border-bottom: 1px solid var(--border);
+      font-family: var(--font-mono); font-size: 12px; color: var(--teal);
+      position: sticky; top:0; background: rgba(11,15,20,0.92); backdrop-filter: blur(6px); z-index: 10;
+    }
+    .mobile-topbar a{ color: var(--text-faint); }
+    .wrap{ padding: 0 22px; }
+    .project{ grid-template-columns: 1fr; }
+    .project-meta{ flex-direction: row; flex-wrap: wrap; gap: 18px; }
+    .meta-row{ flex-direction: column; gap: 2px; }
+    .meta-row .v{ text-align: left; }
+    .role{ grid-template-columns: 1fr; gap: 6px; }
+    .contact-grid{ grid-template-columns: 1fr; }
+    .section-head{ flex-direction: column; gap: 8px; }
+    .section-note{ text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-topbar">
+  <span>quan.dev</span>
+  <a href="#contact">contact →</a>
+</div>
+
+<div class="layout">
+  <aside class="railcol">
+    <div class="rail-top">
+      <div class="mark">QN / AI ENGINEER</div>
+      <nav class="rail-nav">
+        <a href="#intro">Intro</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="rail-bottom">
+      Toronto, ON<br>
+      github.com/<br>Khuong-Quan-Nguyen
+    </div>
+  </aside>
+
+  <main class="maincol">
+
+    <div class="wrap">
+      <section class="hero" id="intro">
+        <div class="eyebrow"><span class="dot"></span>OPEN TO AI ENGINEER ROLES</div>
+        <h1>I build AI systems that pass an audit, not just a demo.</h1>
+        <p class="hero-sub">
+          Quan Nguyen — recent AI/ML grad in Toronto. I ship <strong>forecasting agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Currently targeting AI Engineer roles at Canadian banks and startups.
+        </p>
+        <div class="hero-links">
+          <a class="btn primary" href="#work">View projects</a>
+          <a class="btn" href="https://github.com/Khuong-Quan-Nguyen" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn" href="mailto:quannguyenkhuong8499@gmail.com">Email</a>
+        </div>
+
+        <div class="log">
+          <div class="log-head">
+            <div class="dots"><span></span><span></span><span></span></div>
+            system.log — portfolio_boot
+          </div>
+          <div class="log-body">
+            <div class="log-line"><span class="tag">[gateway]</span><span class="val">audit_log=<span class="ok">enabled</span> pii_scan=<span class="ok">active</span></span></div>
+            <div class="log-line"><span class="tag">[forecast]</span><span class="val">model=holt-winters status=<span class="ok">deployed</span></span></div>
+            <div class="log-line"><span class="tag amber">[mcp]</span><span class="val">server=ml-lifecycle tests=<span class="ok">passing</span> ci=<span class="ok">green</span></span></div>
+            <div class="log-line"><span class="tag">[serving]</span><span class="val">stack=docker+k8s monitoring=prometheus</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section id="work">
+        <div class="section-head">
+          <div>
+            <div class="section-num">01 — SELECTED WORK</div>
+            <h2>Projects</h2>
+          </div>
+          <div class="section-note">Five systems, each built end-to-end: API, frontend, and a real deployment.</div>
+        </div>
+
+        <div class="projects">
+
+          <div class="project">
+            <div>
+              <div class="project-name">td-insights-agent <span class="status live">Deployed</span></div>
+              <p class="project-desc">A natural-language agent over financial time series, built on the Claude API. Ask it a question in plain English, it runs a Holt-Winters forecast and answers with the numbers — every query and response is audit-logged.</p>
+              <div class="project-target">Built for: <span>TD Bank — AI2 team</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">FastAPI · Claude API · Chart.js</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">forecasting, audit trail</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Khuong-Quan-Nguyen/td-insights-agent" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">ml-lifecycle-mcp <span class="status live">Deployed</span></div>
+              <p class="project-desc">An MCP server exposing forecasting and model-lifecycle tools to any MCP-compatible client. Includes Holt-Winters forecasting, structured audit logging, a full test suite, and CI/CD.</p>
+              <div class="project-target">Built for: <span>RBC Borealis — ML Software Engineer</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">MCP · Python · GitHub Actions</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">tooling, CI/CD, tests</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Khuong-Quan-Nguyen/ml-lifecycle-mcp" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">ai-governance-gateway <span class="status live">Deployed</span></div>
+              <p class="project-desc">A proxy that sits in front of LLM calls and scans for PII before anything leaves the network, with every request written to an audit trail. Built to reflect how enterprise GenAI governance actually gets enforced, not just documented.</p>
+              <div class="project-target">Built for: <span>RBC — enterprise GenAI governance</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">FastAPI · regex PII scan</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">governance, PII, audit trail</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Khuong-Quan-Nguyen/ai-governance-gateway" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">rbc-ai-model-serving-platform <span class="status live">Deployed</span></div>
+              <p class="project-desc">A model-serving platform with containerized deployment, orchestration, and live metrics — the infrastructure layer underneath the other projects, built as its own standalone system.</p>
+              <div class="project-target">Built for: <span>RBC AI Group — SWE posting</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">Docker · Kubernetes · Prometheus</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">serving, monitoring, CI/CD</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Khuong-Quan-Nguyen/rbc-ai-model-serving-platform" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">manutd-data-ai <span class="status live">Live site</span></div>
+              <p class="project-desc">An independent sports-data project analyzing squad depth, trophy odds, and transfer targets, with a Claude-powered advisor for plain-language Q&A. Built as a personal fan project — not affiliated with or endorsed by Manchester United.</p>
+              <div class="project-target">Interest area: <span>sports data science</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">FastAPI · Vercel · Claude API</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">analytics, personal project</span></div>
+              <div class="project-links">
+                <a href="https://manutd-data-ai.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/manutd-data-ai" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section id="experience">
+        <div class="section-head">
+          <div>
+            <div class="section-num">02 — TIMELINE</div>
+            <h2>Experience</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="role">
+            <div class="role-date">Jan 2026 – Apr 2026</div>
+            <div>
+              <div class="role-title">AI Engineer Intern · <span class="role-org">Kinectrics</span></div>
+              <p class="role-desc">Trained YOLO-based object detection models on energy-infrastructure imagery, integrated depth-camera data for real-world distance estimation, and shipped a production-ready spatial-insights system for field operations.</p>
+            </div>
+          </div>
+          <div class="role">
+            <div class="role-date">Sep 2022 – Apr 2024</div>
+            <div>
+              <div class="role-title">Machine Learning Engineer · <span class="role-org">ATA Ecommerce</span></div>
+              <p class="role-desc">Built a Chrome extension that scraped and analyzed Etsy listings in real time, surfacing trending products by category and sales velocity to speed up product decisions.</p>
+            </div>
+          </div>
+          <div class="role">
+            <div class="role-date">May 2022 – Aug 2022</div>
+            <div>
+              <div class="role-title">Java Developer Intern · <span class="role-org">FPT Software</span></div>
+              <p class="role-desc">Built Java features and REST APIs for internal enterprise tools, automating classification workflows and cutting deployment time by 30%.</p>
+            </div>
+          </div>
+          <div class="role">
+            <div class="role-date">Jan 2022 – Apr 2022</div>
+            <div>
+              <div class="role-title">Data Analyst Intern · <span class="role-org">Lotus Quality Assurance</span></div>
+              <p class="role-desc">Labeled and validated thousands of forklift images with bounding boxes, improving downstream object-detection model accuracy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section id="skills">
+        <div class="section-head">
+          <div>
+            <div class="section-num">03 — TOOLKIT</div>
+            <h2>Skills</h2>
+          </div>
+        </div>
+
+        <div class="skill-groups">
+          <div>
+            <div class="skill-group-label">AI / ML</div>
+            <div class="chip-row">
+              <span class="chip">Claude API</span>
+              <span class="chip">YOLOv8</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">Holt-Winters</span>
+              <span class="chip">MCP servers</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-group-label">Backend</div>
+            <div class="chip-row">
+              <span class="chip">Python</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">SQL</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-group-label">Infrastructure</div>
+            <div class="chip-row">
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">Prometheus</span>
+              <span class="chip">AWS</span>
+            </div>
+          </div>
+          <div>
+            <div class="skill-group-label">Frontend</div>
+            <div class="chip-row">
+              <span class="chip">React</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Chart.js</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section id="contact">
+        <div class="section-head">
+          <div>
+            <div class="section-num">04 — GET IN TOUCH</div>
+            <h2>Contact</h2>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-lead">Looking for an AI Engineer, agent, or applied ML role in Toronto? Let's talk.</div>
+          <div class="contact-list">
+            <div><span class="k">email</span><a href="mailto:quannguyenkhuong8499@gmail.com">quannguyenkhuong8499@gmail.com</a></div>
+            <div><span class="k">phone</span><a href="tel:+14376074399">(437) 607-4399</a></div>
+            <div><span class="k">github</span><a href="https://github.com/Khuong-Quan-Nguyen" target="_blank" rel="noopener">github.com/Khuong-Quan-Nguyen</a></div>
+            <div><span class="k">location</span><span>Toronto, Ontario</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <footer>© 2026 Quan Nguyen. Built and deployed by hand — no template.</footer>
+    </div>
+
+  </main>
+</div>
+
+</body>
+</html>
