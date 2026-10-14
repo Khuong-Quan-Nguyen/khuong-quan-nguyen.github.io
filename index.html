@@ -8,7 +8,7 @@
 <meta name="description" content="Quan Nguyen — AI/ML Engineer, open to roles across Canada. Production-grade AI systems: football analytics, search and forecasting agents, governance gateways, MCP servers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     color-scheme: light;
@@ -17,13 +17,13 @@
     --surface-2: #F3FAEF;
     --border: #DCE8D6;
     --text: #0F1F0A;
-    --text-muted: #46553F;
-    --text-faint: #66755F;
+    --text-muted: #34422D;
+    --text-faint: #55634E;
     --green: #4CBB17;
     --green-ink: #2A7D0A;
     --green-dim: rgba(76, 187, 23, 0.12);
     --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
   }
 
@@ -36,7 +36,8 @@
     background: var(--bg);
     color: var(--text);
     font-family: var(--font-body);
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -79,15 +80,16 @@
   }
 
   .rail-top .mark{
-    font-family: var(--font-mono);
-    font-size: 13px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
     color: var(--green-ink);
     letter-spacing: 0.04em;
     line-height: 1.5;
   }
   .rail-top .mark-role{
     display: block;
-    font-size: 11px;
+    font-size: 12.5px;
     color: var(--text-faint);
     letter-spacing: 0.06em;
   }
@@ -100,9 +102,10 @@
   }
 
   .rail-nav a{
-    font-family: var(--font-mono);
-    font-size: 12.5px;
-    color: var(--text-faint);
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-muted);
     padding: 8px 0;
     display: flex;
     align-items: center;
@@ -121,8 +124,8 @@
   .rail-nav a:hover::before{ background: var(--green); }
 
   .rail-bottom{
-    font-family: var(--font-mono);
-    font-size: 11px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
     color: var(--text-faint);
     line-height: 1.8;
   }
@@ -154,9 +157,10 @@
   }
 
   .eyebrow{
-    font-family: var(--font-mono);
-    font-size: 12.5px;
+    font-family: var(--font-body);
+    font-size: 13.5px;
     color: var(--green-ink);
+    font-weight: 700;
     letter-spacing: 0.06em;
     display: flex;
     align-items: center;
@@ -185,7 +189,7 @@
     color: var(--text-muted);
     max-width: 56ch;
   }
-  .hero-sub strong{ color: var(--text); font-weight: 500; }
+  .hero-sub strong{ color: var(--text); font-weight: 700; }
 
   .hero-links{
     display: flex;
@@ -194,16 +198,17 @@
     margin-top: 32px;
   }
   .btn{
-    font-family: var(--font-mono);
-    font-size: 12.5px;
+    font-family: var(--font-body);
+    font-size: 13.5px;
     padding: 11px 18px;
     border: 1px solid var(--border);
     border-radius: 3px;
-    color: var(--text-muted);
+    font-weight: 600;
+    color: var(--text);
     transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
   }
   .btn:hover{ border-color: var(--green); color: var(--green-ink); background: var(--green-dim); }
-  .btn.primary{ border-color: var(--green); color: var(--text); background: var(--green); font-weight: 500; }
+  .btn.primary{ border-color: var(--green); color: var(--text); background: var(--green); font-weight: 700; }
   .btn.primary:hover{ background: #5BCB25; color: var(--text); }
 
   /* ---------- Log ticker (signature element) ---------- */
@@ -219,7 +224,7 @@
     padding: 10px 16px;
     border-bottom: 1px solid var(--border);
     font-family: var(--font-mono);
-    font-size: 11px;
+    font-size: 12.5px;
     color: var(--text-faint);
   }
   .log-head .dots{ display:flex; gap:5px; margin-right: 6px; }
@@ -227,7 +232,7 @@
   .log-body{
     padding: 16px 16px 18px;
     font-family: var(--font-mono);
-    font-size: 12.5px;
+    font-size: 13.5px;
     color: var(--text-muted);
   }
   .log-line{ display:flex; gap: 10px; padding: 3px 0; }
@@ -247,8 +252,8 @@
     gap: 24px;
   }
   .section-num{
-    font-family: var(--font-mono);
-    font-size: 12px;
+    font-family: var(--font-body);
+    font-size: 13px;
     color: var(--text-faint);
   }
   h2{
@@ -258,8 +263,8 @@
     letter-spacing: -0.005em;
   }
   .section-note{
-    font-family: var(--font-mono);
-    font-size: 12px;
+    font-family: var(--font-body);
+    font-size: 13px;
     color: var(--text-faint);
     max-width: 32ch;
     text-align: right;
@@ -272,7 +277,7 @@
     background: var(--surface);
     padding: 28px 28px;
     display: grid;
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: 1fr 310px;
     gap: 32px;
     transition: background 0.15s ease;
   }
@@ -288,8 +293,9 @@
     flex-wrap: wrap;
   }
   .status{
-    font-family: var(--font-mono);
-    font-size: 10.5px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 0.04em;
     padding: 3px 8px;
     border-radius: 3px;
@@ -301,38 +307,54 @@
   .project-desc{
     margin-top: 10px;
     color: var(--text-muted);
-    font-size: 14.5px;
+    font-size: 15.5px;
     max-width: 58ch;
   }
+  .project-desc strong{ color: var(--text); font-weight: 600; }
 
   .project-target{
     margin-top: 12px;
-    font-family: var(--font-mono);
-    font-size: 11.5px;
+    font-family: var(--font-body);
+    font-size: 13px;
     color: var(--text-faint);
   }
-  .project-target span{ color: var(--green-ink); }
+  .project-target span{ color: var(--green-ink); font-weight: 600; }
 
   .project-meta{
-    font-family: var(--font-mono);
-    font-size: 11.5px;
+    font-family: var(--font-body);
+    font-size: 13px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: center;
   }
   .meta-row{ display:flex; justify-content: space-between; gap: 12px; color: var(--text-faint); }
-  .meta-row .v{ color: var(--text-muted); text-align: right; }
+  .meta-row .v{ color: var(--text); font-weight: 500; text-align: right; }
 
-  .project-links{ display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
-  .project-links a{ color: var(--green-ink); font-family: var(--font-mono); font-size: 11.5px; }
-  .project-links a:hover{ text-decoration: underline; }
-  .src-private{ color: var(--text-faint); font-family: var(--font-mono); font-size: 11.5px; }
+  .project-links{
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    margin-top: 6px; padding: 12px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--green);
+    border-radius: 4px;
+  }
+  .project-links a{
+    font-family: var(--font-body); font-size: 14px; font-weight: 700;
+    padding: 9px 14px; border-radius: 3px;
+    border: 2px solid var(--green);
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .project-links a.link-live{ background: var(--green); color: var(--text); }
+  .project-links a.link-live:hover{ background: #5BCB25; }
+  .project-links a.link-repo{ background: var(--bg); color: var(--green-ink); }
+  .project-links a.link-repo:hover{ background: var(--green-dim); }
+  .src-private{ color: var(--text-faint); font-family: var(--font-body); font-size: 13px; }
 
   .fine{
     margin-top: 40px;
-    font-family: var(--font-mono);
-    font-size: 11px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
     color: var(--text-faint);
     line-height: 1.7;
   }
@@ -348,8 +370,8 @@
   }
   .role:first-child{ border-top: none; }
   .role-date{
-    font-family: var(--font-mono);
-    font-size: 12px;
+    font-family: var(--font-body);
+    font-size: 13px;
     color: var(--text-faint);
     padding-top: 3px;
   }
@@ -359,7 +381,7 @@
     font-weight: 600;
   }
   .role-org{ color: var(--green-ink); font-weight: 500; }
-  .role-desc{ margin-top: 8px; color: var(--text-muted); font-size: 14px; max-width: 62ch; }
+  .role-desc{ margin-top: 8px; color: var(--text-muted); font-size: 15px; max-width: 62ch; }
 
   /* ---------- Skills ---------- */
   .skill-groups{
@@ -368,17 +390,18 @@
     gap: 28px;
   }
   .skill-group-label{
-    font-family: var(--font-mono);
-    font-size: 11px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
     color: var(--green-ink);
+    font-weight: 700;
     letter-spacing: 0.05em;
     margin-bottom: 14px;
     text-transform: uppercase;
   }
   .chip-row{ display: flex; flex-wrap: wrap; gap: 8px; }
   .chip{
-    font-family: var(--font-mono);
-    font-size: 12px;
+    font-family: var(--font-body);
+    font-size: 13px;
     color: var(--text-muted);
     border: 1px solid var(--border);
     padding: 6px 11px;
@@ -399,15 +422,15 @@
     line-height: 1.3;
     max-width: 18ch;
   }
-  .contact-list{ font-family: var(--font-mono); font-size: 13.5px; display:flex; flex-direction:column; gap:12px; }
-  .contact-list a{ color: var(--text-muted); }
+  .contact-list{ font-family: var(--font-body); font-size: 14.5px; display:flex; flex-direction:column; gap:12px; }
+  .contact-list a{ color: var(--text); font-weight: 600; }
   .contact-list a:hover{ color: var(--green-ink); }
   .contact-list .k{ color: var(--text-faint); display:inline-block; width: 74px; }
 
   footer{
     padding: 28px 0 60px;
-    font-family: var(--font-mono);
-    font-size: 11px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
     color: var(--text-faint);
   }
 
@@ -422,7 +445,7 @@
     .mobile-topbar{
       display:flex; justify-content: space-between; align-items:center;
       padding: 20px 24px; border-bottom: 1px solid var(--border);
-      font-family: var(--font-mono); font-size: 12px; color: var(--green-ink);
+      font-family: var(--font-body); font-size: 13px; color: var(--green-ink);
       position: sticky; top:0; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); z-index: 10;
     }
     .mobile-topbar a{ color: var(--text-faint); }
@@ -473,7 +496,7 @@
             <div class="eyebrow"><span class="dot"></span>OPEN TO AI/ML ROLES ACROSS CANADA</div>
             <h1>I build AI systems that pass an audit, not just a demo.</h1>
             <p class="hero-sub">
-              Quan Nguyen — AI/ML Engineer. I ship <strong>analytics platforms, LLM agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Based in Toronto and open to AI and ML roles anywhere in Canada.
+              Quan Nguyen — AI/ML Engineer. I ship <strong>analytics platforms, LLM agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Based in Toronto and <strong>open to AI and ML roles anywhere in Canada</strong>.
             </p>
             <div class="hero-links">
               <a class="btn primary" href="#work">View projects</a>
@@ -515,14 +538,14 @@
           <div class="project">
             <div>
               <div class="project-name">Football AIQ <span class="status live">Live</span> <span class="status build">Flagship</span></div>
-              <p class="project-desc">One football analytics platform for many clubs — every Premier League club, plus Toronto FC and Inter Toronto FC. It runs its own xG model, Bayesian finishing estimates, and a 5,000-run season simulation, writes match reports that explain why a game was won or lost, and includes Ask FAIQ: a Claude analyst that answers only from the database. Data refreshes daily through GitHub Actions and every Claude call is audited. Unofficial fan project — not affiliated with any club or league.</p>
+              <p class="project-desc"><strong>One football analytics platform for many clubs</strong> — every Premier League club, plus Toronto FC and Inter Toronto FC. It runs its own xG model, Bayesian finishing estimates, and a 5,000-run season simulation, writes match reports that explain why a game was won or lost, and includes Ask FAIQ: a Claude analyst that answers only from the database. Data refreshes daily through GitHub Actions and every Claude call is audited. Unofficial fan project — not affiliated with any club or league.</p>
               <div class="project-target">Interest area: <span>football data &amp; AI</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">FastAPI · React · scikit-learn · Claude API</span></div>
               <div class="meta-row"><span>focus</span><span class="v">own models, forecasting, AI analyst</span></div>
               <div class="project-links">
-                <a href="https://football-aiq.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://football-aiq.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
                 <span class="src-private">source private</span>
               </div>
             </div>
@@ -531,15 +554,15 @@
           <div class="project">
             <div>
               <div class="project-name">yelp-local-search <span class="status live">Live</span></div>
-              <p class="project-desc">A local-business search agent over the Yelp Open Dataset. Type a free-text request and get ranked businesses back, each with the reason it was picked and the review quotes that justify it. The pipeline is a LangGraph state machine: an over-constrained query loops back through retrieval with relaxed constraints instead of returning nothing.</p>
+              <p class="project-desc"><strong>A local-business search agent over the Yelp Open Dataset</strong>. Type a free-text request and get ranked businesses back, each with the reason it was picked and the review quotes that justify it. The pipeline is a LangGraph state machine: an over-constrained query loops back through retrieval with relaxed constraints instead of returning nothing.</p>
               <div class="project-target">Built for: <span>Yelp — local search</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">LangGraph · FAISS · Claude API · FastAPI</span></div>
               <div class="meta-row"><span>focus</span><span class="v">agentic retrieval, cited answers</span></div>
               <div class="project-links">
-                <a href="https://yelp-local-search.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/yelp-local-search" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://yelp-local-search.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/yelp-local-search" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -547,15 +570,15 @@
           <div class="project">
             <div>
               <div class="project-name">td-genai-platform-ops <span class="status live">Live</span></div>
-              <p class="project-desc">Governed Claude access for an engineering team: a PII guardrail redacts identifiers before any model call, and an append-only audit trail records every request — success, blocked, or error — with the kinds of PII found, never the values. Ships with a React ops console served from the same FastAPI process.</p>
+              <p class="project-desc"><strong>Governed Claude access for an engineering team</strong>: a PII guardrail redacts identifiers before any model call, and an append-only audit trail records every request — success, blocked, or error — with the kinds of PII found, never the values. Ships with a React ops console served from the same FastAPI process.</p>
               <div class="project-target">Built for: <span>TD Bank — GenAI platform</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">FastAPI · React · Claude API</span></div>
               <div class="meta-row"><span>focus</span><span class="v">PII redaction, audit trail</span></div>
               <div class="project-links">
-                <a href="https://td-genai-platform-ops.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/td-genai-platform-ops" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://td-genai-platform-ops.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/td-genai-platform-ops" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -563,15 +586,15 @@
           <div class="project">
             <div>
               <div class="project-name">td-insights-agent <span class="status live">Live</span></div>
-              <p class="project-desc">A natural-language agent over financial time series, built on the Claude API. Ask it a question in plain English, it decides whether it needs a Holt-Winters forecast, runs it, and answers with the numbers — every question and answer is audit-logged.</p>
+              <p class="project-desc"><strong>A natural-language agent over financial time series, built on the Claude API</strong>. Ask it a question in plain English, it decides whether it needs a Holt-Winters forecast, runs it, and answers with the numbers — every question and answer is audit-logged.</p>
               <div class="project-target">Built for: <span>TD Bank — AI2 team</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">FastAPI · Claude API · Chart.js</span></div>
               <div class="meta-row"><span>focus</span><span class="v">forecasting, audit trail</span></div>
               <div class="project-links">
-                <a href="https://td-insights-agent.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/td-insights-agent" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://td-insights-agent.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/td-insights-agent" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -579,15 +602,15 @@
           <div class="project">
             <div>
               <div class="project-name">ai-governance-gateway <span class="status live">Live</span></div>
-              <p class="project-desc">A checkpoint that sits between an employee's prompt and an external LLM API. Each prompt is scanned for sensitive patterns, then blocked, redacted, or passed clean, and the decision is written to an audit log. A small demonstration of how enterprise GenAI governance gets enforced, not just documented.</p>
+              <p class="project-desc"><strong>A checkpoint that sits between an employee's prompt and an external LLM API</strong>. Each prompt is scanned for sensitive patterns, then blocked, redacted, or passed clean, and the decision is written to an audit log. A small demonstration of how enterprise GenAI governance gets enforced, not just documented.</p>
               <div class="project-target">Built for: <span>RBC — enterprise GenAI governance</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">Python stdlib · regex PII scan</span></div>
               <div class="meta-row"><span>focus</span><span class="v">governance, PII, audit trail</span></div>
               <div class="project-links">
-                <a href="https://ai-governance-gateway-five.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/ai-governance-gateway" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://ai-governance-gateway-five.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/ai-governance-gateway" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -595,15 +618,15 @@
           <div class="project">
             <div>
               <div class="project-name">rbc-ai-model-serving-platform <span class="status live">Live</span></div>
-              <p class="project-desc">A production-shaped service that serves a time-series forecasting model behind FastAPI, with containerized deployment, Kubernetes manifests, structured logs, Prometheus metrics and alert rules, and a dashboard showing live health and request traffic.</p>
+              <p class="project-desc"><strong>A production-shaped service that serves a time-series forecasting model behind FastAPI</strong>, with containerized deployment, Kubernetes manifests, structured logs, Prometheus metrics and alert rules, and a dashboard showing live health and request traffic.</p>
               <div class="project-target">Built for: <span>RBC AI Group — SWE posting</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">Docker · Kubernetes · Prometheus</span></div>
               <div class="meta-row"><span>focus</span><span class="v">serving, monitoring, CI/CD</span></div>
               <div class="project-links">
-                <a href="https://rbc-ai-model-serving-platform.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/rbc-ai-model-serving-platform" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://rbc-ai-model-serving-platform.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/rbc-ai-model-serving-platform" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -611,14 +634,14 @@
           <div class="project">
             <div>
               <div class="project-name">ml-lifecycle-mcp <span class="status build">Code</span></div>
-              <p class="project-desc">An MCP server that exposes a Holt-Winters forecasting model as a tool for any MCP-compatible client, with typed interfaces, input validation, tests that cover the failure modes, and an audit log of every call.</p>
+              <p class="project-desc"><strong>An MCP server that exposes a Holt-Winters forecasting model as a tool for any MCP-compatible client</strong>, with typed interfaces, input validation, tests that cover the failure modes, and an audit log of every call.</p>
               <div class="project-target">Built for: <span>RBC Borealis — ML Software Engineer</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">MCP · Python · statsmodels</span></div>
               <div class="meta-row"><span>focus</span><span class="v">tooling, tests, audit log</span></div>
               <div class="project-links">
-                <a href="https://github.com/Khuong-Quan-Nguyen/ml-lifecycle-mcp" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/ml-lifecycle-mcp" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -626,15 +649,15 @@
           <div class="project">
             <div>
               <div class="project-name">quantum-uav-disaster-relief <span class="status live">Live</span></div>
-              <p class="project-desc">Quantum optimization applied to a disaster-relief problem: after a flood takes out ground telecom, which UAV base station should cover which zone? The assignment is formulated as a QUBO and solved with QAOA, then checked against a brute-force classical optimum. An illustrative demo, not a live system.</p>
+              <p class="project-desc"><strong>Quantum optimization applied to a disaster-relief problem</strong>: after a flood takes out ground telecom, which UAV base station should cover which zone? The assignment is formulated as a QUBO and solved with QAOA, then checked against a brute-force classical optimum. An illustrative demo, not a live system.</p>
               <div class="project-target">Interest area: <span>quantum optimization</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">PennyLane · QAOA · Python</span></div>
               <div class="meta-row"><span>focus</span><span class="v">QUBO, optimization</span></div>
               <div class="project-links">
-                <a href="https://quantum-uav-disaster-relief.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/quantum-uav-disaster-relief" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://quantum-uav-disaster-relief.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/quantum-uav-disaster-relief" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -642,15 +665,15 @@
           <div class="project">
             <div>
               <div class="project-name">Agent Shopping Runner <span class="status live">Live</span></div>
-              <p class="project-desc">An agentic-commerce demo: state a shopping goal in plain language, watch the agent parse it, search a multi-merchant catalog, rank the options and propose a cart — then stop and wait for your approval before it buys. Ranking is deterministic and explainable, with a full step-by-step trace.</p>
+              <p class="project-desc"><strong>An agentic-commerce demo</strong>: state a shopping goal in plain language, watch the agent parse it, search a multi-merchant catalog, rank the options and propose a cart — then stop and wait for your approval before it buys. Ranking is deterministic and explainable, with a full step-by-step trace.</p>
               <div class="project-target">Built for: <span>Lenavix — agentic commerce</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">Next.js · TypeScript · React</span></div>
               <div class="meta-row"><span>focus</span><span class="v">agents, human approval</span></div>
               <div class="project-links">
-                <a href="https://lenavix-agent-shopping-runner-curso.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/Lenavix-Agent-Shopping-Runner-Cursor" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://lenavix-agent-shopping-runner-curso.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/Lenavix-Agent-Shopping-Runner-Cursor" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -658,14 +681,14 @@
           <div class="project">
             <div>
               <div class="project-name">Inter Toronto FC Analytics <span class="status live">Live</span></div>
-              <p class="project-desc">A Canadian Premier League analytics tool: a data pipeline into SQLite covering 1,549 player-seasons from 2019 to 2026, a position-aware player similarity model that names the stats behind each match, and KMeans role archetypes. Independent project — not affiliated with the club or league.</p>
+              <p class="project-desc"><strong>A Canadian Premier League analytics tool</strong>: a data pipeline into SQLite covering 1,549 player-seasons from 2019 to 2026, a position-aware player similarity model that names the stats behind each match, and KMeans role archetypes. Independent project — not affiliated with the club or league.</p>
               <div class="project-target">Interest area: <span>sports data science</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">FastAPI · React · scikit-learn</span></div>
               <div class="meta-row"><span>focus</span><span class="v">data pipeline, similarity model</span></div>
               <div class="project-links">
-                <a href="https://inter-toronto-analytics.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://inter-toronto-analytics.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
                 <span class="src-private">source private</span>
               </div>
             </div>
@@ -674,14 +697,14 @@
           <div class="project">
             <div>
               <div class="project-name">KhuongQuanLingo <span class="status live">Live</span></div>
-              <p class="project-desc">A web app for learning French at A1 level, built around the syllabus of a real classroom course. Each lesson teaches the rule first, then drills it: 21 units, 36 lessons and 248 exercises, with phonetics, tap-to-hear audio, and a mistake book that brings back what you missed. Interface in English and Vietnamese.</p>
+              <p class="project-desc"><strong>A web app for learning French at A1 level, built around the syllabus of a real classroom course</strong>. Each lesson teaches the rule first, then drills it: 21 units, 36 lessons and 248 exercises, with phonetics, tap-to-hear audio, and a mistake book that brings back what you missed. Interface in English and Vietnamese.</p>
               <div class="project-target">Personal project: <span>language learning</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">Next.js · TypeScript · Supabase</span></div>
               <div class="meta-row"><span>focus</span><span class="v">product, content model</span></div>
               <div class="project-links">
-                <a href="https://khuongquanlingo.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://khuongquanlingo.vercel.app" class="link-live" target="_blank" rel="noopener">Live site ↗</a>
                 <span class="src-private">source private</span>
               </div>
             </div>
@@ -690,14 +713,14 @@
           <div class="project">
             <div>
               <div class="project-name">kubra-billing-chatbot <span class="status build">Code</span></div>
-              <p class="project-desc">A RAG chatbot for utility-billing support. Questions are embedded and matched against an FAQ knowledge base, and Claude answers only from the retrieved entries, with source citations. If nothing relevant is retrieved it skips the model call, and it falls back to a template answer when the API is unavailable.</p>
+              <p class="project-desc"><strong>A RAG chatbot for utility-billing support</strong>. Questions are embedded and matched against an FAQ knowledge base, and Claude answers only from the retrieved entries, with source citations. If nothing relevant is retrieved it skips the model call, and it falls back to a template answer when the API is unavailable.</p>
               <div class="project-target">Built for: <span>Kubra — billing support</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">sentence-transformers · Claude API · FastAPI</span></div>
               <div class="meta-row"><span>focus</span><span class="v">RAG, grounding, fallback</span></div>
               <div class="project-links">
-                <a href="https://github.com/Khuong-Quan-Nguyen/kubra-billing-chatbot" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/kubra-billing-chatbot" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
@@ -705,14 +728,14 @@
           <div class="project">
             <div>
               <div class="project-name">object-distance-estimation <span class="status build">Code</span></div>
-              <p class="project-desc">Upload a photo and YOLOv8 detects each object, estimates its distance from the camera with the monocular similar-triangles method, and draws the real-world distance between objects. A clean-room demo of the detection-plus-distance idea, built on a public pretrained model with no proprietary data.</p>
+              <p class="project-desc"><strong>Upload a photo and YOLOv8 detects each object</strong>, estimates its distance from the camera with the monocular similar-triangles method, and draws the real-world distance between objects. A clean-room demo of the detection-plus-distance idea, built on a public pretrained model with no proprietary data.</p>
               <div class="project-target">Interest area: <span>computer vision</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">YOLOv8 · FastAPI · Python</span></div>
               <div class="meta-row"><span>focus</span><span class="v">detection, distance estimation</span></div>
               <div class="project-links">
-                <a href="https://github.com/Khuong-Quan-Nguyen/object-distance-estimation" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/object-distance-estimation" class="link-repo" target="_blank" rel="noopener">GitHub repo ↗</a>
               </div>
             </div>
           </div>
