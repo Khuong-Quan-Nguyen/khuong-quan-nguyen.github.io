@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quan Nguyen — AI Engineer</title>
-<meta name="description" content="Quan Nguyen — AI Engineer in Toronto. Production-grade ML systems: forecasting agents, governance gateways, MCP servers.">
+<meta name="theme-color" content="#4CBB17">
+<title>Quan Nguyen — AI/ML Engineer</title>
+<meta name="description" content="Quan Nguyen — AI/ML Engineer, open to roles across Canada. Production-grade AI systems: football analytics, search and forecasting agents, governance gateways, MCP servers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg: #0B0F14;
-    --surface: #10161D;
-    --surface-2: #141B23;
-    --border: #212A34;
-    --text: #E8ECF1;
-    --text-muted: #8A97A6;
-    --text-faint: #566270;
-    --teal: #4FD1C5;
-    --amber: #E8A33D;
-    --teal-dim: rgba(79, 209, 197, 0.12);
-    --amber-dim: rgba(232, 163, 61, 0.12);
+    color-scheme: light;
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-2: #F3FAEF;
+    --border: #DCE8D6;
+    --text: #0F1F0A;
+    --text-muted: #46553F;
+    --text-faint: #66755F;
+    --green: #4CBB17;
+    --green-ink: #2A7D0A;
+    --green-dim: rgba(76, 187, 23, 0.12);
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'IBM Plex Sans', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
@@ -31,6 +32,7 @@
   html{ scroll-behavior:smooth; }
 
   body{
+    border-top: 4px solid var(--green);
     background: var(--bg);
     color: var(--text);
     font-family: var(--font-body);
@@ -39,10 +41,10 @@
   }
 
   a{ color: inherit; text-decoration:none; }
-  ::selection{ background: var(--teal-dim); color: var(--teal); }
+  ::selection{ background: var(--green-dim); color: var(--green-ink); }
 
   a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--teal);
+    outline: 2px solid var(--green);
     outline-offset: 3px;
   }
 
@@ -79,7 +81,7 @@
   .rail-top .mark{
     font-family: var(--font-mono);
     font-size: 13px;
-    color: var(--teal);
+    color: var(--green-ink);
     letter-spacing: 0.04em;
     line-height: 1.5;
   }
@@ -116,7 +118,7 @@
     transition: background 0.15s ease;
   }
   .rail-nav a:hover{ color: var(--text); }
-  .rail-nav a:hover::before{ background: var(--teal); }
+  .rail-nav a:hover::before{ background: var(--green); }
 
   .rail-bottom{
     font-family: var(--font-mono);
@@ -154,7 +156,7 @@
   .eyebrow{
     font-family: var(--font-mono);
     font-size: 12.5px;
-    color: var(--amber);
+    color: var(--green-ink);
     letter-spacing: 0.06em;
     display: flex;
     align-items: center;
@@ -164,8 +166,8 @@
   .eyebrow .dot{
     width: 7px; height: 7px;
     border-radius: 50%;
-    background: var(--amber);
-    box-shadow: 0 0 0 3px var(--amber-dim);
+    background: var(--green);
+    box-shadow: 0 0 0 3px var(--green-dim);
   }
 
   h1{
@@ -200,14 +202,14 @@
     color: var(--text-muted);
     transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
   }
-  .btn:hover{ border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
-  .btn.primary{ border-color: var(--teal); color: var(--teal); background: var(--teal-dim); }
-  .btn.primary:hover{ background: rgba(79,209,197,0.2); }
+  .btn:hover{ border-color: var(--green); color: var(--green-ink); background: var(--green-dim); }
+  .btn.primary{ border-color: var(--green); color: var(--text); background: var(--green); font-weight: 500; }
+  .btn.primary:hover{ background: #5BCB25; color: var(--text); }
 
   /* ---------- Log ticker (signature element) ---------- */
   .log{
     margin-top: 44px;
-    background: var(--surface);
+    background: var(--surface-2);
     border: 1px solid var(--border);
     border-radius: 6px;
     overflow: hidden;
@@ -221,7 +223,7 @@
     color: var(--text-faint);
   }
   .log-head .dots{ display:flex; gap:5px; margin-right: 6px; }
-  .log-head .dots span{ width:7px; height:7px; border-radius:50%; background: var(--border); }
+  .log-head .dots span{ width:7px; height:7px; border-radius:50%; background: var(--green); }
   .log-body{
     padding: 16px 16px 18px;
     font-family: var(--font-mono);
@@ -229,10 +231,9 @@
     color: var(--text-muted);
   }
   .log-line{ display:flex; gap: 10px; padding: 3px 0; }
-  .log-line .tag{ color: var(--teal); flex-shrink:0; width: 92px; }
-  .log-line .tag.amber{ color: var(--amber); }
+  .log-line .tag{ color: var(--green-ink); flex-shrink:0; width: 92px; }
   .log-line .val{ color: var(--text-muted); }
-  .log-line .ok{ color: var(--teal); }
+  .log-line .ok{ color: var(--green-ink); }
 
   /* ---------- Section shell ---------- */
   section{ padding: 72px 0; border-bottom: 1px solid var(--border); }
@@ -294,8 +295,8 @@
     border-radius: 3px;
     text-transform: uppercase;
   }
-  .status.live{ color: var(--teal); background: var(--teal-dim); border: 1px solid rgba(79,209,197,0.35); }
-  .status.build{ color: var(--amber); background: var(--amber-dim); border: 1px solid rgba(232,163,61,0.35); }
+  .status.live{ color: var(--text); background: var(--green); border: 1px solid var(--green); }
+  .status.build{ color: var(--green-ink); background: var(--bg); border: 1px solid var(--green); }
 
   .project-desc{
     margin-top: 10px;
@@ -310,7 +311,7 @@
     font-size: 11.5px;
     color: var(--text-faint);
   }
-  .project-target span{ color: var(--amber); }
+  .project-target span{ color: var(--green-ink); }
 
   .project-meta{
     font-family: var(--font-mono);
@@ -323,9 +324,10 @@
   .meta-row{ display:flex; justify-content: space-between; gap: 12px; color: var(--text-faint); }
   .meta-row .v{ color: var(--text-muted); text-align: right; }
 
-  .project-links{ display: flex; gap: 14px; margin-top: 4px; }
-  .project-links a{ color: var(--teal); font-family: var(--font-mono); font-size: 11.5px; }
+  .project-links{ display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
+  .project-links a{ color: var(--green-ink); font-family: var(--font-mono); font-size: 11.5px; }
   .project-links a:hover{ text-decoration: underline; }
+  .src-private{ color: var(--text-faint); font-family: var(--font-mono); font-size: 11.5px; }
 
   .fine{
     margin-top: 40px;
@@ -356,7 +358,7 @@
     font-size: 17px;
     font-weight: 600;
   }
-  .role-org{ color: var(--teal); font-weight: 500; }
+  .role-org{ color: var(--green-ink); font-weight: 500; }
   .role-desc{ margin-top: 8px; color: var(--text-muted); font-size: 14px; max-width: 62ch; }
 
   /* ---------- Skills ---------- */
@@ -368,7 +370,7 @@
   .skill-group-label{
     font-family: var(--font-mono);
     font-size: 11px;
-    color: var(--amber);
+    color: var(--green-ink);
     letter-spacing: 0.05em;
     margin-bottom: 14px;
     text-transform: uppercase;
@@ -399,7 +401,7 @@
   }
   .contact-list{ font-family: var(--font-mono); font-size: 13.5px; display:flex; flex-direction:column; gap:12px; }
   .contact-list a{ color: var(--text-muted); }
-  .contact-list a:hover{ color: var(--teal); }
+  .contact-list a:hover{ color: var(--green-ink); }
   .contact-list .k{ color: var(--text-faint); display:inline-block; width: 74px; }
 
   footer{
@@ -420,13 +422,13 @@
     .mobile-topbar{
       display:flex; justify-content: space-between; align-items:center;
       padding: 20px 24px; border-bottom: 1px solid var(--border);
-      font-family: var(--font-mono); font-size: 12px; color: var(--teal);
-      position: sticky; top:0; background: rgba(11,15,20,0.92); backdrop-filter: blur(6px); z-index: 10;
+      font-family: var(--font-mono); font-size: 12px; color: var(--green-ink);
+      position: sticky; top:0; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); z-index: 10;
     }
     .mobile-topbar a{ color: var(--text-faint); }
     .wrap{ padding: 0 22px; }
     .project{ grid-template-columns: 1fr; }
-    .project-meta{ flex-direction: row; flex-wrap: wrap; gap: 18px; }
+    .project-meta{ flex-direction: row; flex-wrap: wrap; gap: 18px; justify-content: flex-start; }
     .meta-row{ flex-direction: column; gap: 2px; }
     .meta-row .v{ text-align: left; }
     .role{ grid-template-columns: 1fr; gap: 6px; }
@@ -446,7 +448,7 @@
 <div class="layout">
   <aside class="railcol">
     <div class="rail-top">
-      <div class="mark">QUAN NGUYEN<span class="mark-role">AI ENGINEER</span></div>
+      <div class="mark">QUAN NGUYEN<span class="mark-role">AI/ML ENGINEER</span></div>
       <nav class="rail-nav">
         <a href="#intro">Intro</a>
         <a href="#work">Work</a>
@@ -457,6 +459,7 @@
     </div>
     <div class="rail-bottom">
       Toronto, ON<br>
+      Open to roles<br>across Canada<br>
       github.com/<br>Khuong-Quan-Nguyen
     </div>
   </aside>
@@ -467,10 +470,10 @@
       <section class="hero" id="intro">
         <div class="hero-grid">
           <div>
-            <div class="eyebrow"><span class="dot"></span>OPEN TO AI ENGINEER ROLES</div>
+            <div class="eyebrow"><span class="dot"></span>OPEN TO AI/ML ROLES ACROSS CANADA</div>
             <h1>I build AI systems that pass an audit, not just a demo.</h1>
             <p class="hero-sub">
-              Quan Nguyen — recent AI/ML grad in Toronto. I ship <strong>forecasting agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Currently targeting AI Engineer roles at Canadian banks and startups.
+              Quan Nguyen — AI/ML Engineer. I ship <strong>analytics platforms, LLM agents, governance gateways, and MCP servers</strong> with logging, CI/CD, and tests baked in from the start, not bolted on after. Based in Toronto and open to AI and ML roles anywhere in Canada.
             </p>
             <div class="hero-links">
               <a class="btn primary" href="#work">View projects</a>
@@ -489,8 +492,9 @@
           <div class="log-body">
             <div class="log-line"><span class="tag">[gateway]</span><span class="val">audit_log=<span class="ok">enabled</span> pii_scan=<span class="ok">active</span></span></div>
             <div class="log-line"><span class="tag">[forecast]</span><span class="val">model=holt-winters status=<span class="ok">deployed</span></span></div>
-            <div class="log-line"><span class="tag amber">[mcp]</span><span class="val">server=ml-lifecycle tests=<span class="ok">passing</span> ci=<span class="ok">green</span></span></div>
+            <div class="log-line"><span class="tag">[mcp]</span><span class="val">server=ml-lifecycle tests=<span class="ok">passing</span> ci=<span class="ok">green</span></span></div>
             <div class="log-line"><span class="tag">[serving]</span><span class="val">stack=docker+k8s monitoring=prometheus</span></div>
+            <div class="log-line"><span class="tag">[football]</span><span class="val">app=football-aiq refresh=daily status=<span class="ok">live</span></span></div>
           </div>
         </div>
       </section>
@@ -503,21 +507,70 @@
             <div class="section-num">01 — SELECTED WORK</div>
             <h2>Projects</h2>
           </div>
-          <div class="section-note">Five systems, each built end-to-end: API, frontend, and a real deployment.</div>
+          <div class="section-note">Thirteen projects, built end-to-end. Ten are live — open them.</div>
         </div>
 
         <div class="projects">
 
           <div class="project">
             <div>
-              <div class="project-name">td-insights-agent <span class="status live">Deployed</span></div>
-              <p class="project-desc">A natural-language agent over financial time series, built on the Claude API. Ask it a question in plain English, it runs a Holt-Winters forecast and answers with the numbers — every query and response is audit-logged.</p>
+              <div class="project-name">Football AIQ <span class="status live">Live</span> <span class="status build">Flagship</span></div>
+              <p class="project-desc">One football analytics platform for many clubs — every Premier League club, plus Toronto FC and Inter Toronto FC. It runs its own xG model, Bayesian finishing estimates, and a 5,000-run season simulation, writes match reports that explain why a game was won or lost, and includes Ask FAIQ: a Claude analyst that answers only from the database. Data refreshes daily through GitHub Actions and every Claude call is audited. Unofficial fan project — not affiliated with any club or league.</p>
+              <div class="project-target">Interest area: <span>football data &amp; AI</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">FastAPI · React · scikit-learn · Claude API</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">own models, forecasting, AI analyst</span></div>
+              <div class="project-links">
+                <a href="https://football-aiq.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <span class="src-private">source private</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">yelp-local-search <span class="status live">Live</span></div>
+              <p class="project-desc">A local-business search agent over the Yelp Open Dataset. Type a free-text request and get ranked businesses back, each with the reason it was picked and the review quotes that justify it. The pipeline is a LangGraph state machine: an over-constrained query loops back through retrieval with relaxed constraints instead of returning nothing.</p>
+              <div class="project-target">Built for: <span>Yelp — local search</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">LangGraph · FAISS · Claude API · FastAPI</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">agentic retrieval, cited answers</span></div>
+              <div class="project-links">
+                <a href="https://yelp-local-search.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/yelp-local-search" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">td-genai-platform-ops <span class="status live">Live</span></div>
+              <p class="project-desc">Governed Claude access for an engineering team: a PII guardrail redacts identifiers before any model call, and an append-only audit trail records every request — success, blocked, or error — with the kinds of PII found, never the values. Ships with a React ops console served from the same FastAPI process.</p>
+              <div class="project-target">Built for: <span>TD Bank — GenAI platform</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">FastAPI · React · Claude API</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">PII redaction, audit trail</span></div>
+              <div class="project-links">
+                <a href="https://td-genai-platform-ops.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/td-genai-platform-ops" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">td-insights-agent <span class="status live">Live</span></div>
+              <p class="project-desc">A natural-language agent over financial time series, built on the Claude API. Ask it a question in plain English, it decides whether it needs a Holt-Winters forecast, runs it, and answers with the numbers — every question and answer is audit-logged.</p>
               <div class="project-target">Built for: <span>TD Bank — AI2 team</span></div>
             </div>
             <div class="project-meta">
               <div class="meta-row"><span>stack</span><span class="v">FastAPI · Claude API · Chart.js</span></div>
               <div class="meta-row"><span>focus</span><span class="v">forecasting, audit trail</span></div>
               <div class="project-links">
+                <a href="https://td-insights-agent.vercel.app" target="_blank" rel="noopener">Live ↗</a>
                 <a href="https://github.com/Khuong-Quan-Nguyen/td-insights-agent" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
@@ -525,13 +578,45 @@
 
           <div class="project">
             <div>
-              <div class="project-name">ml-lifecycle-mcp <span class="status live">Deployed</span></div>
-              <p class="project-desc">An MCP server exposing forecasting and model-lifecycle tools to any MCP-compatible client. Includes Holt-Winters forecasting, structured audit logging, a full test suite, and CI/CD.</p>
+              <div class="project-name">ai-governance-gateway <span class="status live">Live</span></div>
+              <p class="project-desc">A checkpoint that sits between an employee's prompt and an external LLM API. Each prompt is scanned for sensitive patterns, then blocked, redacted, or passed clean, and the decision is written to an audit log. A small demonstration of how enterprise GenAI governance gets enforced, not just documented.</p>
+              <div class="project-target">Built for: <span>RBC — enterprise GenAI governance</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">Python stdlib · regex PII scan</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">governance, PII, audit trail</span></div>
+              <div class="project-links">
+                <a href="https://ai-governance-gateway-five.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/ai-governance-gateway" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">rbc-ai-model-serving-platform <span class="status live">Live</span></div>
+              <p class="project-desc">A production-shaped service that serves a time-series forecasting model behind FastAPI, with containerized deployment, Kubernetes manifests, structured logs, Prometheus metrics and alert rules, and a dashboard showing live health and request traffic.</p>
+              <div class="project-target">Built for: <span>RBC AI Group — SWE posting</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">Docker · Kubernetes · Prometheus</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">serving, monitoring, CI/CD</span></div>
+              <div class="project-links">
+                <a href="https://rbc-ai-model-serving-platform.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/rbc-ai-model-serving-platform" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">ml-lifecycle-mcp <span class="status build">Code</span></div>
+              <p class="project-desc">An MCP server that exposes a Holt-Winters forecasting model as a tool for any MCP-compatible client, with typed interfaces, input validation, tests that cover the failure modes, and an audit log of every call.</p>
               <div class="project-target">Built for: <span>RBC Borealis — ML Software Engineer</span></div>
             </div>
             <div class="project-meta">
-              <div class="meta-row"><span>stack</span><span class="v">MCP · Python · GitHub Actions</span></div>
-              <div class="meta-row"><span>focus</span><span class="v">tooling, CI/CD, tests</span></div>
+              <div class="meta-row"><span>stack</span><span class="v">MCP · Python · statsmodels</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">tooling, tests, audit log</span></div>
               <div class="project-links">
                 <a href="https://github.com/Khuong-Quan-Nguyen/ml-lifecycle-mcp" target="_blank" rel="noopener">Repo ↗</a>
               </div>
@@ -540,46 +625,94 @@
 
           <div class="project">
             <div>
-              <div class="project-name">ai-governance-gateway <span class="status live">Deployed</span></div>
-              <p class="project-desc">A proxy that sits in front of LLM calls and scans for PII before anything leaves the network, with every request written to an audit trail. Built to reflect how enterprise GenAI governance actually gets enforced, not just documented.</p>
-              <div class="project-target">Built for: <span>RBC — enterprise GenAI governance</span></div>
+              <div class="project-name">quantum-uav-disaster-relief <span class="status live">Live</span></div>
+              <p class="project-desc">Quantum optimization applied to a disaster-relief problem: after a flood takes out ground telecom, which UAV base station should cover which zone? The assignment is formulated as a QUBO and solved with QAOA, then checked against a brute-force classical optimum. An illustrative demo, not a live system.</p>
+              <div class="project-target">Interest area: <span>quantum optimization</span></div>
             </div>
             <div class="project-meta">
-              <div class="meta-row"><span>stack</span><span class="v">FastAPI · regex PII scan</span></div>
-              <div class="meta-row"><span>focus</span><span class="v">governance, PII, audit trail</span></div>
+              <div class="meta-row"><span>stack</span><span class="v">PennyLane · QAOA · Python</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">QUBO, optimization</span></div>
               <div class="project-links">
-                <a href="https://github.com/Khuong-Quan-Nguyen/ai-governance-gateway" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://quantum-uav-disaster-relief.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/quantum-uav-disaster-relief" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
           </div>
 
           <div class="project">
             <div>
-              <div class="project-name">rbc-ai-model-serving-platform <span class="status live">Deployed</span></div>
-              <p class="project-desc">A model-serving platform with containerized deployment, orchestration, and live metrics — the infrastructure layer underneath the other projects, built as its own standalone system.</p>
-              <div class="project-target">Built for: <span>RBC AI Group — SWE posting</span></div>
+              <div class="project-name">Agent Shopping Runner <span class="status live">Live</span></div>
+              <p class="project-desc">An agentic-commerce demo: state a shopping goal in plain language, watch the agent parse it, search a multi-merchant catalog, rank the options and propose a cart — then stop and wait for your approval before it buys. Ranking is deterministic and explainable, with a full step-by-step trace.</p>
+              <div class="project-target">Built for: <span>Lenavix — agentic commerce</span></div>
             </div>
             <div class="project-meta">
-              <div class="meta-row"><span>stack</span><span class="v">Docker · Kubernetes · Prometheus</span></div>
-              <div class="meta-row"><span>focus</span><span class="v">serving, monitoring, CI/CD</span></div>
+              <div class="meta-row"><span>stack</span><span class="v">Next.js · TypeScript · React</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">agents, human approval</span></div>
               <div class="project-links">
-                <a href="https://github.com/Khuong-Quan-Nguyen/rbc-ai-model-serving-platform" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://lenavix-agent-shopping-runner-curso.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <a href="https://github.com/Khuong-Quan-Nguyen/Lenavix-Agent-Shopping-Runner-Cursor" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
           </div>
 
           <div class="project">
             <div>
-              <div class="project-name">manutd-data-ai <span class="status live">Live site</span></div>
-              <p class="project-desc">An independent sports-data project analyzing squad depth, trophy odds, and transfer targets, with a Claude-powered advisor for plain-language Q&A. Built as a personal fan project — not affiliated with or endorsed by Manchester United.</p>
+              <div class="project-name">Inter Toronto FC Analytics <span class="status live">Live</span></div>
+              <p class="project-desc">A Canadian Premier League analytics tool: a data pipeline into SQLite covering 1,549 player-seasons from 2019 to 2026, a position-aware player similarity model that names the stats behind each match, and KMeans role archetypes. Independent project — not affiliated with the club or league.</p>
               <div class="project-target">Interest area: <span>sports data science</span></div>
             </div>
             <div class="project-meta">
-              <div class="meta-row"><span>stack</span><span class="v">FastAPI · Vercel · Claude API</span></div>
-              <div class="meta-row"><span>focus</span><span class="v">analytics, personal project</span></div>
+              <div class="meta-row"><span>stack</span><span class="v">FastAPI · React · scikit-learn</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">data pipeline, similarity model</span></div>
               <div class="project-links">
-                <a href="https://manutd-data-ai.vercel.app" target="_blank" rel="noopener">Live ↗</a>
-                <a href="https://github.com/Khuong-Quan-Nguyen/manutd-data-ai" target="_blank" rel="noopener">Repo ↗</a>
+                <a href="https://inter-toronto-analytics.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <span class="src-private">source private</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">KhuongQuanLingo <span class="status live">Live</span></div>
+              <p class="project-desc">A web app for learning French at A1 level, built around the syllabus of a real classroom course. Each lesson teaches the rule first, then drills it: 21 units, 36 lessons and 248 exercises, with phonetics, tap-to-hear audio, and a mistake book that brings back what you missed. Interface in English and Vietnamese.</p>
+              <div class="project-target">Personal project: <span>language learning</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">Next.js · TypeScript · Supabase</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">product, content model</span></div>
+              <div class="project-links">
+                <a href="https://khuongquanlingo.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+                <span class="src-private">source private</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">kubra-billing-chatbot <span class="status build">Code</span></div>
+              <p class="project-desc">A RAG chatbot for utility-billing support. Questions are embedded and matched against an FAQ knowledge base, and Claude answers only from the retrieved entries, with source citations. If nothing relevant is retrieved it skips the model call, and it falls back to a template answer when the API is unavailable.</p>
+              <div class="project-target">Built for: <span>Kubra — billing support</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">sentence-transformers · Claude API · FastAPI</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">RAG, grounding, fallback</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Khuong-Quan-Nguyen/kubra-billing-chatbot" target="_blank" rel="noopener">Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div>
+              <div class="project-name">object-distance-estimation <span class="status build">Code</span></div>
+              <p class="project-desc">Upload a photo and YOLOv8 detects each object, estimates its distance from the camera with the monocular similar-triangles method, and draws the real-world distance between objects. A clean-room demo of the detection-plus-distance idea, built on a public pretrained model with no proprietary data.</p>
+              <div class="project-target">Interest area: <span>computer vision</span></div>
+            </div>
+            <div class="project-meta">
+              <div class="meta-row"><span>stack</span><span class="v">YOLOv8 · FastAPI · Python</span></div>
+              <div class="meta-row"><span>focus</span><span class="v">detection, distance estimation</span></div>
+              <div class="project-links">
+                <a href="https://github.com/Khuong-Quan-Nguyen/object-distance-estimation" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
           </div>
@@ -647,6 +780,9 @@
               <span class="chip">Claude API</span>
               <span class="chip">YOLOv8</span>
               <span class="chip">PyTorch</span>
+              <span class="chip">scikit-learn</span>
+              <span class="chip">LangGraph</span>
+              <span class="chip">RAG</span>
               <span class="chip">Holt-Winters</span>
               <span class="chip">MCP servers</span>
             </div>
@@ -674,6 +810,8 @@
             <div class="skill-group-label">Frontend</div>
             <div class="chip-row">
               <span class="chip">React</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">TypeScript</span>
               <span class="chip">JavaScript</span>
               <span class="chip">Chart.js</span>
             </div>
@@ -692,12 +830,12 @@
         </div>
 
         <div class="contact-grid">
-          <div class="contact-lead">Looking for an AI Engineer, agent, or applied ML role in Toronto? Let's talk.</div>
+          <div class="contact-lead">Hiring for an AI or ML role anywhere in Canada? Let's talk.</div>
           <div class="contact-list">
             <div><span class="k">email</span><a href="mailto:quannguyenkhuong8499@gmail.com">quannguyenkhuong8499@gmail.com</a></div>
             <div><span class="k">phone</span><a href="tel:+14376074399">(437) 607-4399</a></div>
             <div><span class="k">github</span><a href="https://github.com/Khuong-Quan-Nguyen" target="_blank" rel="noopener">github.com/Khuong-Quan-Nguyen</a></div>
-            <div><span class="k">location</span><span>Toronto, Ontario</span></div>
+            <div><span class="k">location</span><span>Toronto, ON · open to roles across Canada</span></div>
           </div>
         </div>
       </section>

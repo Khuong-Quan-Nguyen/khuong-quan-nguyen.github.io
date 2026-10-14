@@ -1,6 +1,6 @@
 # khuong-quan-nguyen.github.io
 
-Personal portfolio site — Quan Nguyen, AI Engineer (Toronto, ON).
+Personal portfolio site — Quan Nguyen, AI/ML Engineer (based in Toronto, open to roles across Canada).
 
 **Live:** https://khuong-quan-nguyen.github.io
 
